@@ -139,4 +139,5 @@ Cloud-based analytics dashboard
 <img width="1235" height="912" alt="image" src="https://github.com/user-attachments/assets/9cbf2877-e3a7-4f26-a3df-dc79b0624e95" />
 
 <img width="1198" height="877" alt="image" src="https://github.com/user-attachments/assets/bc6024c3-6b05-48ad-b7b8-947331957168" />
+<img width="1887" height="842" alt="image" src="https://github.com/user-attachments/assets/7bf2e5a9-41e6-42d6-a971-2704f773a4dc" />
 
