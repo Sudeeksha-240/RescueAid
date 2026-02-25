@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Rescue Aid - Emergency Guidance</title>
+    <link rel="manifest" href="/static/manifest.json">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="manifest" href="/static/manifest.json">
+</head>
+<body>
+
+    <div id="disclaimer-modal" class="modal">
+        <div class="modal-content">
+            <h2 id="modal-title">⚠️ CRITICAL WARNING</h2>
+            <p><strong>Rescue Aid</strong> <span id="modal-text1">is an offline guidance tool. It does <b>NOT</b> replace professional medical advice.</span></p>
+            <p id="modal-text2">Always seek professional medical help immediately. Call emergency services in critical situations.</p>
+            <button id="accept-disclaimer" class="btn btn-primary">I Understand</button>
+        </div>
+    </div>
+
+    <header>
+        <div class="logo">🚑 Rescue Aid</div>
+        <div class="header-controls">
+            <button id="voice-toggle-btn" class="control-btn" title="Toggle voice control">🎤 Voice Control</button>
+            <select id="language-selector" class="language-selector">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="de">Deutsch</option>
+                <option value="pt">Português</option>
+                <option value="hi">हिंदी</option>
+                <option value="ta">தமிழ்</option>
+                <option value="te">తెలుగు</option>
+                <option value="bn">বাংলা</option>
+            </select>
+            <a href="tel:112" class="emergency-call-btn">📞 CALL 112</a>
+        </div>
+    </header>
+
+    <main id="app-container">
+        <div id="screen-home" class="screen active">
+            <h1 id="home-title">What is the emergency?</h1>
+            <p id="home-subtitle" class="subtitle">Select an option below for step-by-step guidance.</p>
+            
+            <div id="condition-grid" class="grid">
+            </div>
+
+            <div class="static-disclaimer">
+                <p id="home-disclaimer"><strong>⚠️ Disclaimer:</strong> Rescue Aid is an offline tool designed only for emergency first aid situations. It does not replace professional medical advice. Always seek professional help when possible.</p>
+            </div>
+
+            <div id="voice-status" class="voice-indicator hidden">
+                <p id="voice-status-text">🔴 Listening...</p>
+            </div>
+        </div>
+
+        <div id="screen-question" class="screen hidden">
+            <button id="btn-back" class="btn-text">← Back to Menu</button>
+            
+            <div class="card">
+                <h2 id="prompt-text">Loading...</h2>
+                
+                <div id="action-buttons" class="button-group hidden">
+                    <button id="btn-yes" class="btn btn-success">YES</button>
+                    <button id="btn-no" class="btn btn-danger">NO</button>
+                    <div id="voice-hint" class="voice-hint hidden">
+                        <p id="voice-hint-text">Say 'YES' or 'CORRECT'</p>
+                    </div>
+                </div>
+                
+                <div id="end-buttons" class="button-group hidden">
+                    <button id="btn-done" class="btn btn-primary">Done / Return to Start</button>
+                </div>
+
+                <div id="severity-indicator" class="severity-indicator hidden">
+                    <p id="severity-text">Severity: Low</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/static/data/languages.json"></script>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
